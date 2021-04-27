@@ -1,5 +1,9 @@
 import flask
 from flask import Flask, render_template, request
+import urllib
+
+# My page library
+import pages
 
 # For random tests
 import random
@@ -8,15 +12,8 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET','POST'])
 def home():
-    # return "Hello, World!"
-    if request.method == 'POST':
-        print('Something')
-        if request.form['submit_button'] == 'Change Results':
-            return render_template('home.html', arg_1=dynamic_page(), arg_2=dynamic_page())
-        else:
-            pass # unknown
-    elif request.method == 'GET':
-        return render_template('home.html', arg_1=dynamic_page(), arg_2=dynamic_page())
+    content = pages.home
+    return render_template('basic_page.html', title='Home | AndrewLei4Hire' , content=content)
 
 def dynamic_page():
     seed = random.seed()

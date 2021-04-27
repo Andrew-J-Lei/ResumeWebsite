@@ -1,0 +1,34 @@
+
+nav_bar {
+    position: fixed;
+    top: 0px;
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+    z-index: 2;
+    font-size: 17px;
+    background-color: #282A35;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 0;
+    letter-spacing: 1px;
+    font-family: 'Source Sans Pro', sans-serif;
+    .column {
+        float: left;
+        width: 20%;
+    }
+}
+
+
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+}

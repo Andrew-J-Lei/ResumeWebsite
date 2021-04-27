@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/styles/style_1.css">
+</head>
+<body>
+    <div class="nav_bar">
+        <div class="row">
+            <div class="column">About me</div>
+            <div class="column">Resume</div>
+            <div class="column">Cover Letter</div>
+            <div class="column">Projects</div>
+            <div class="column">Fun Things</div>
+        </div>
+    </div>
+    <div>
+    {{ content|safe}}
+    </div>
+</body>
+</html>

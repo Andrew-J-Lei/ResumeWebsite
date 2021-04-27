@@ -1,0 +1,1 @@
+from .home import content as home
