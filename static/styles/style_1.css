@@ -1,34 +1,76 @@
+/*.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
 
-nav_bar {
-    position: fixed;
-    top: 0px;
-    padding: 8px 16px;
-    float: left;
-    width: auto;
-    border: none;
-    display: block;
-    outline: 0;
-    z-index: 2;
-    font-size: 17px;
-    background-color: #282A35;
-    color: #f1f1f1;
-    width: 100%;
-    padding: 0;
-    letter-spacing: 1px;
-    font-family: 'Source Sans Pro', sans-serif;
-    .column {
-        float: left;
-        width: 20%;
-    }
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+html:([data-fixed="false"]) {
+  div.nav_bar.center{
+    position: relative;
+    top: 100px;
+  }
+}
+
+html:([data-fixed="true"]) {
+  div.nav_bar.center{
+  position: fixed; 
+  top: 0px;
+  }
 }
 
 
+/*html:([data-fixed="false"]) div.nav_bar.center{
+    position: relative;
+    top: 100px;
+}
+
+html:([data-fixed="true"]) div.nav_bar.center{
+  position: fixed; 
+  top: 0px;
+}*/
+
+div.nav_bar.center{
+    overflow: auto;
+    padding: 8px 8px;
+    width: auto;
+    border: none;
+    font-size: 17px;
+    background-color: #282A35;
+    color: #f1f1f1;
+    width: 98%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+div.nav_bar.column {
+    float: right;
+    width: calc(98%/6);
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+div.nav_bar.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body {
   background-color: powderblue;
+  margin: 0;
+  height:10000px;
 }
 h1 {
   color: blue;
 }
 p {
   color: red;
+}
+div {
+    border-radius: 10px;
 }

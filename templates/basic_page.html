@@ -2,16 +2,27 @@
 <html>
 <head>
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="../static/styles/style_1.css">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style_1.css') }}">
+     <script type="text/javascript" src="{{url_for('static', filename='js/scroll.js') }}"></script>
 </head>
 <body>
-    <div class="nav_bar">
-        <div class="row">
-            <div class="column">About me</div>
-            <div class="column">Resume</div>
-            <div class="column">Cover Letter</div>
-            <div class="column">Projects</div>
-            <div class="column">Fun Things</div>
+    <div class="nav_bar center">
+        <div class="nav_bar row">
+            <div class="nav_bar column">
+                <p>About me</p>
+            </div>
+            <div class="nav_bar column">
+                <p>Resume</p>
+            </div>
+            <div class="nav_bar column">
+                <p>Cover Letter</p>
+            </div>
+            <div class="nav_bar column">
+                <p>Projects</p>
+            </div>
+            <div class="nav_bar column">
+                <p>Fun Things</p>
+            </div>
         </div>
     </div>
     <div>
