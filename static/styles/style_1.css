@@ -10,7 +10,18 @@
   padding: 10px;
 }
 
-html:([data-fixed="false"]) {
+html:not([data-fixed='true']) div.nav_bar.center{
+    position: relative;
+    top: 0px;
+}
+
+html:not([data-fixed='false']) div.nav_bar.center{
+  position: fixed; 
+  top: 0px;
+}
+
+
+/*html:([data-fixed="false"]) {
   div.nav_bar.center{
     position: relative;
     top: 100px;
@@ -25,7 +36,7 @@ html:([data-fixed="true"]) {
 }
 
 
-/*html:([data-fixed="false"]) div.nav_bar.center{
+*//*html:([data-fixed="false"]) div.nav_bar.center{
     position: relative;
     top: 100px;
 }
@@ -37,20 +48,20 @@ html:([data-fixed="true"]) div.nav_bar.center{
 
 div.nav_bar.center{
     overflow: auto;
-    padding: 8px 8px;
+    padding: 2px 2px;
     width: auto;
     border: none;
-    font-size: 17px;
+    font-size: 16px;
     background-color: #282A35;
     color: #f1f1f1;
-    width: 98%;
+    width: 100%;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 div.nav_bar.column {
     float: right;
     width: calc(98%/6);
-    padding: 10px;
+    padding: 2px;
 }
 
 /* Clear floats after the columns */
