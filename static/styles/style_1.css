@@ -13,7 +13,7 @@ html:not([data-fixed='false']) div.nav_bar.center{
 /*--------------------------------- Page Template ----------------------------*/
 
 .center {
-  margin: 0px;
+  margin: auto;
   width: 50%;
   padding: 0px;
 }
@@ -57,39 +57,54 @@ div.nav_bar.row:after {
   background-size: cover;
 }
 
-.content_bg{
-  background-color:rgba(255, 255, 255, 0.5);
+.content_section{
+  background-color:rgba(255, 255, 255, 0.6);
+}
+
+h1.content_heading{
+  position: relative;
+  /*padding: 10px;*/
+  float:left;
+  margin-left:3%;
+  font-size: 200%;
 }
 
 /*------------------------------------- Intro --------------------------------*/
 
 div.intro{
   position: relative;
-  top:40px;
-  height:600px;
+  top:2%;
+  height:25%;
 }
 
 #intro_text{
   float:left;
-  width:55%;
+  width:45%;
   position: relative;
-  margin-left: 30px;
-  top:60px;
-  font-size: 56px;
+  margin-left: 10%;
+  padding:1%;
+  top:20%;
+  font-size: 400%;
   overflow: auto;
 }
 
 #intro_img_wrap{
   float:left;
-  width:40%;
+  height: 320px;
+  width: 240px;
+  margin-left: 3%;
   position: relative;
-  top:200px;
+  top:20%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 #prof_pic{
-  position:relative;
-  width:200px;
-  margin-left: 10px;
+  display: inline;
+  float:left;
+  margin-left: -25px;
+  height: 100%;
+  width: 133%;
 }
 
 #waves_wrap{
@@ -103,13 +118,66 @@ div.intro{
   width:100%;
 }
 
-/*----------------------------------- Credits ----- --------------------------*/
+/*----------------------------------- Credits --------------------------------*/
 
-#credits{
-
+div.credentials{
+  top:5%;
+  position:relative;
+  height:10%;
+  width:80%;
 }
 
+#UCSC_logo_wrap{
+  /*top:20px;*/
+  position:relative;
+  width: 50%;
+}
 
+#UCSC_logo{
+  width: 50%;
+  height:auto;
+  float: left;
+  margin-left: 10%;
+}
+
+#creds_text_fields{
+  /*text-align: center;*/
+  width: 20%;
+  float: left;
+  margin-left: 20%;
+}
+
+#creds_text_answers_wrapper{
+  width: 20%;
+  float: left;
+  left-margin:0%;
+}
+
+#creds_text_answers{
+  /*text-align: center;*/
+  width: 20%;
+  float: right;
+}
+
+/*----------------------------------- Interests ------------------------------*/
+
+div.interests{
+  top: 200px;
+  position:relative;
+  height:360px;
+  width:80%;
+  padding:20px;
+}
+
+/*--------------------------------- Philosophies -----------------------------*/
+
+div.philosophies{
+  top: 400px;
+  position:relative;
+  height:360px;
+  width:80%;
+  padding:20px;
+}
 
 
 /*----------------------------------- General Style --------------------------*/
@@ -122,12 +190,9 @@ body {
   margin: 0;
   /*height:10000px;*/
 }
-h1 {
+/*h1 {
   color: blue;
-}
-p {
-  color: red;
-}
+}*/
 div {
     border-radius: 10px;
 }
