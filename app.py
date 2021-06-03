@@ -3,7 +3,6 @@ from flask import Flask, render_template, request
 import urllib
 
 # My page library
-import pages
 
 # For random tests
 import random
@@ -12,8 +11,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET','POST'])
 def home():
-    content = pages.home
-    return render_template('basic_page.html', title='Home | AndrewLei4Hire' , content=content)
+    return render_template('home.html', title='Home | AndrewLei4Hire')
 
 def dynamic_page():
     seed = random.seed()

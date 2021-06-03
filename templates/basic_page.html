@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>{{ title }}</title>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style_1.css') }}">
-     <script type="text/javascript" src="{{url_for('static', filename='js/scroll.js') }}"></script>
+    <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style_1.css') }}"> -->
+    <!-- <script type="text/javascript" src="{{url_for('static', filename='js/scroll.js') }}"></script> -->
 </head>
 <body>
     <div class="nav_bar center">
@@ -34,8 +34,6 @@
             </div> -->
         </div>
     </div>
-    <div>
-    {{ content|safe}}
-    </div>
+    {% block content %}{% endblock %}
 </body>
 </html>

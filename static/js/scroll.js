@@ -10,11 +10,3 @@ document.addEventListener("scroll", () => {
 var wave_interval = 400;
 var counter = 0;
 
-// while(1){
-//     counter += 1;
-//     if (counter > wave_interval){
-//         // 25% chance of activating animation
-//         Math.floor(Math.random() * 3); 
-//     }
-// }
-

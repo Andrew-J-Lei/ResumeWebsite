@@ -162,21 +162,16 @@ div.credentials{
 /*----------------------------------- Interests ------------------------------*/
 
 div.interests{
-  top: 200px;
+  top:13%;
   position:relative;
-  height:360px;
+  height:20%;
   width:80%;
-  padding:20px;
 }
 
 /*--------------------------------- Philosophies -----------------------------*/
 
 div.philosophies{
-  top: 400px;
-  position:relative;
-  height:360px;
-  width:80%;
-  padding:20px;
+
 }
 
 
