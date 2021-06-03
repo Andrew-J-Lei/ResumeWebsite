@@ -80,6 +80,7 @@ div.intro{
 #intro_text{
   float:left;
   width:45%;
+  max-height: 50%;
   position: relative;
   margin-left: 10%;
   padding:1%;
