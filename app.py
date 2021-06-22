@@ -19,6 +19,20 @@ def dynamic_page():
     return rand_num
 
 
+@app.route("/interests_1.html", methods=['GET','POST'])
+def interests_1():
+    return render_template('ajax/interests_1.html')
+
+@app.route("/interests_2.html", methods=['GET','POST'])
+def interests_2():
+    return "sucka2"
+    # return render_template('ajax/interests_1.html')
+
+@app.route("/interests_3.html", methods=['GET','POST'])
+def interests_3():
+    return "sucka3"
+    # return render_template('ajax/interests_1.html')
+
 
 if __name__ == '__main__':
     # For debugging

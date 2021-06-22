@@ -3,6 +3,8 @@
 <head>
     <title>{{ title }}</title>
     <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style_1.css') }}"> -->
+    {{ stylesheet }}
+    {{ js }}
     <!-- <script type="text/javascript" src="{{url_for('static', filename='js/scroll.js') }}"></script> -->
 </head>
 <body>
@@ -35,5 +37,6 @@
         </div>
     </div>
     {% block content %}{% endblock %}
+    {% block jscss %}{% endblock %}
 </body>
 </html>

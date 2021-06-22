@@ -12,6 +12,7 @@ html:not([data-fixed='false']) div.nav_bar.center{
 
 /*--------------------------------- Page Template ----------------------------*/
 
+
 .center {
   margin: auto;
   width: 50%;
@@ -49,7 +50,6 @@ div.nav_bar.row:after {
 .home_bg{
   background-image: url("https://andrewleiwebresources.blob.core.windows.net/website-resources/iceberg-01.png");
   height:375%;
-  width:100%;
   padding:0px;
   position:absolute;
   background-position: center;
@@ -61,12 +61,90 @@ div.nav_bar.row:after {
   background-color:rgba(255, 255, 255, 0.6);
 }
 
-h1.content_heading{
+.my_h1{
+  font-weight: bold;
   position: relative;
-  /*padding: 10px;*/
+  top: 10px;
   float:left;
-  margin-left:3%;
+  margin-left:25px;
   font-size: 200%;
+}
+
+#int_ch_content{
+  top: 2%;
+  height:90%;
+  width:100%;
+}
+
+div.content{
+  display:inline-block;
+  position:relative;
+  top:10px;
+  height:90%;
+  width:100%;
+}
+
+.my_h2{
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+  float:left;
+  margin-left:25px;
+  font-size: 125%;
+}
+
+div.subcontent{
+  display:inline-block;
+  position:relative;
+  top:20px;
+  height:310px;
+  width:100%;
+}
+
+.subcontent_img_wrapper{
+  display:inline-block;
+  position: relative;
+  top:10%;
+  float:left;
+  margin-left:25px;
+  height: 80%;
+  width: 35%;
+}
+
+.subcontent_img{
+  position:relative;
+  display:inline-block;
+  width:100%;
+  height:auto;
+}
+
+.subcontent_nav{
+    top:0px;
+    position:relative;
+    display:block;
+    height:35px;
+    width:25%;
+}
+
+.trans_butt{
+  font-size:30px;
+  position:relative;
+  display:inline-block;
+  font-weight: bold;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.sel_butt{
+  color:white;
+}
+
+.unsel_butt{
+  color:gray;
 }
 
 /*------------------------------------- Intro --------------------------------*/
@@ -80,6 +158,7 @@ div.intro{
 #intro_text{
   float:left;
   width:45%;
+  max-height: 75%;
   position: relative;
   margin-left: 10%;
   padding:1%;
@@ -88,24 +167,71 @@ div.intro{
   overflow: auto;
 }
 
-#intro_img_wrap{
-  float:left;
-  height: 320px;
-  width: 240px;
-  margin-left: 3%;
+.wind_path{
+  stroke-linecap: round;
+  stroke-dasharray: 100 600;
+  stroke-dashoffset: -100;
   position: relative;
-  top:20%;
-  border-radius: 50%;
-  overflow: hidden;
+  float:left;
+  top:0px;
+  display:inline-block;
 }
 
-#prof_pic{
-  display: inline;
-  float:left;
-  margin-left: -25px;
-  height: 100%;
-  width: 133%;
+#wind_1a_container{
+  position: absolute;
+  height:300px;
+  width:500px;
+  top: -60px;
+  left: 20px;
 }
+
+#wind_1b_container{
+  position: absolute;
+  height:300px;
+  width:500px;
+  top: -50px;
+  left: 30px;
+}
+
+/*.path {
+  stroke-dasharray: 100;
+  animation: dash 5s linear;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}*/
+
+@media only screen and (max-width: 630px) {
+  #intro_img_wrap{
+    display:none;
+  }
+
+  #prof_pic{
+    display:none;
+  }
+}
+
+  #intro_img_wrap{
+    float:left;
+    height: 320px;
+    width: 240px;
+    margin-left: 3%;
+    position: relative;
+    top:20%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  #prof_pic{
+    display: inline;
+    float:left;
+    margin-left: -25px;
+    height: 100%;
+    width: 133%;
+  }
 
 #waves_wrap{
   position:absolute;
@@ -121,9 +247,9 @@ div.intro{
 /*----------------------------------- Credits --------------------------------*/
 
 div.credentials{
-  top:5%;
+  top:8%;
   position:relative;
-  height:10%;
+  height:8%;
   width:80%;
 }
 
@@ -134,6 +260,8 @@ div.credentials{
 }
 
 #UCSC_logo{
+  position:relative;
+  top:10px;
   width: 50%;
   height:auto;
   float: left;
@@ -141,32 +269,35 @@ div.credentials{
 }
 
 #creds_text_fields{
-  /*text-align: center;*/
+  position:relative;
+  top:20px;
   width: 20%;
   float: left;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 #creds_text_answers_wrapper{
-  width: 20%;
+  position:relative;
+  top:20px;
+  width: 40%;
   float: left;
   left-margin:0%;
 }
 
 #creds_text_answers{
   /*text-align: center;*/
-  width: 20%;
   float: right;
 }
 
 /*----------------------------------- Interests ------------------------------*/
 
 div.interests{
-  top:13%;
+  top:20%;
   position:relative;
   height:20%;
   width:80%;
 }
+
 
 /*--------------------------------- Philosophies -----------------------------*/
 
@@ -176,18 +307,17 @@ div.philosophies{
 
 
 /*----------------------------------- General Style --------------------------*/
-.html{
+html{
   width:100%;
+  min-width:630px;
+  display:inline-block;
 }
 
 body {
-  background-color: powderblue;
   margin: 0;
-  /*height:10000px;*/
+  display:inline-block;
 }
-/*h1 {
-  color: blue;
-}*/
-div {
+
+div.rounded {
     border-radius: 10px;
 }
