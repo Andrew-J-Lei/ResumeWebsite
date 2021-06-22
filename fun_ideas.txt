@@ -1,0 +1,41 @@
+Home:
+  - "Picture" of all the pages on the site
+    - About me: ice berg (initial)
+    - Cover letter: ?
+    - Projects: mountain
+    - Thoughts: my mind
+    - Misc web projects: laptop
+
+Animation:
+  - Zoom in on that part of the picture. Zoom out to reveal 
+   the different perspective picture
+  - Bubble the ocean as one scrolls below the ice berg
+
+About me:
+  - Surface
+    - Andrew Lei | Computer Engineer
+  - Deeper
+    - UCSC Robotics
+    - Interests
+    - Philosophies
+
+Cover Letter:
+  - Retrieve IP address. Try to match it with your employer
+    to construct a personalized cover letter.
+
+Projects: 
+  - Style
+     - Ascending towards the sky ("Sci-Fi" ideas are in the sky)
+  - Content
+    - Senior Design Project
+    - lit show: need a video representation
+    - Anal Bot
+    - laife.io
+
+Thoughts:
+  - Matrix styled background. Letters animate and take shape.
+
+Misc. Web Projects:
+  - Think of it as you go along
+
+
