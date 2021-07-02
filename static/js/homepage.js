@@ -1,22 +1,21 @@
 // import anime from 'animejs/lib/anime.es.js';
 
-var curr_ints;
-const num_ints = 3;
+var subcontent_dict = {'num_ints':3, 'curr_ints':1, 'num_phils':1, 'curr_phils':1}
 
 // AJAX for Interests home page
-function changeInterests(int_num) {
+function change_subcontent(type, sub_num) {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function() {
-    document.getElementById("int_ch_content").innerHTML = this.responseText;
+    document.getElementById(type+"_ch_content").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "interests_"+int_num+".html");
+  xhttp.open("GET", type+'_'+sub_num+".html");
   xhttp.send();
-  var targ_butt = document.getElementById('ints_'+int_num+'_butt');
+  var targ_butt = document.getElementById(type+'_'+sub_num+'_butt');
   targ_butt.classList.remove("unsel_butt");
   targ_butt.classList.add("sel_butt");
-  for (var i=1; i <= num_ints; i++){
-    if (i != int_num){
-      targ_butt = document.getElementById("ints_"+i+"_butt");
+  for (let i=1; i <= subcontent_dict['num_'+type]; i++){
+    if (i != sub_num){
+      targ_butt = document.getElementById(type+"_"+i+"_butt");
       if (targ_butt.classList.contains("sel_butt")){
         targ_butt.classList.add("unsel_butt");
         targ_butt.classList.remove("sel_butt");
@@ -25,23 +24,23 @@ function changeInterests(int_num) {
   }
 }
 
-function decrementInterests() {
-  curr_ints -= 1;
-  if (curr_ints < 1)
-    curr_ints = num_ints;
-  changeInterests(curr_ints);
+function decrement_subcontent(type) {
+  subcontent_dict['curr_'+type] -= 1;
+  if (subcontent_dict['curr_'+type] < 1)
+    subcontent_dict['curr_'+type] = subcontent_dict['num_'+type];
+  change_subcontent(type,subcontent_dict['curr_'+type]);
 }
 
-function incrementInterests() {
-  curr_ints += 1;
-  if (curr_ints > 3)
-    curr_ints = 1;
-  changeInterests(curr_ints);
+function increment_subcontent(type) {
+  subcontent_dict['curr_'+type] += 1;
+  if (subcontent_dict['curr_'+type] > subcontent_dict['num_'+type])
+    subcontent_dict['curr_'+type] = 1;
+  change_subcontent(type,subcontent_dict['curr_'+type]);
 }
 
 function onload_homepage(){
   curr_ints = 1;
-  changeInterests(curr_ints);
+  change_subcontent('ints',curr_ints);
   // Hide all svgs
   var wind_paths = document.getElementsByClassName("wind_path");
   for (let i=0; i < wind_paths.length; i++)
@@ -124,7 +123,7 @@ async function wave_rand(i){
   var min_duration = 3;
   var duration = 1000 * Math.floor(Math.random() * (max_duration - min_duration) + min_duration);
   // Animation
-  console.log("Animating wave_"+i)
+  // console.log("Animating wave_"+i)
   var wave_path = document.getElementsByClassName("wave_path")[i];
   await animate(wave_path, wave_frames, duration);
   document.getElementsByClassName("wave_appearance")[i].style.display = "none";
@@ -175,7 +174,7 @@ async function wave_all(chance, sleep_time) {
   var wave_freq = 1;
   for (let i=0; i < num_waves; i++) {
     var activation = Math.floor(Math.random() * chance);
-    console.log("Deciding wind_"+i);
+    // console.log("Deciding wind_"+i);
     if (activation <= wave_freq && !wave_active[i]){
       wave_rand(i);
     }

@@ -15,7 +15,7 @@ About me:
   - Surface
     - Andrew Lei | Computer Engineer
   - Deeper
-    - UCSC Robotics
+    - UCSC, Robotics
     - Interests
     - Philosophies
 
@@ -31,6 +31,7 @@ Projects:
     - lit show: need a video representation
     - Anal Bot
     - laife.io
+    - this site
 
 Thoughts:
   - Matrix styled background. Letters animate and take shape.

@@ -2,9 +2,9 @@
 
 {% block content %}
 
+<div id="intro_text"> "Hello, my name is Andrew, and I'm a computer engineer." </div>
 <div class="home_bg">
     <div class="intro">
-        <div id="intro_text"> "Hello, my name is Andrew, and I'm a computer engineer." </div>
         <div id="intro_img_wrap">
             <img id="prof_pic" src="https://andrewleiwebresources.blob.core.windows.net/website-resources/1565203348035.jfif" alt="Andrew Lei">
         </div>
@@ -67,22 +67,34 @@
         </div>
     </div>
     <div class="interests content_section center rounded">
-        <text class="my_h1"> Formal Credentials </text>
+        <text class="my_h1"> Professional Interests </text>
         <div class="content">
-            <div id="int_ch_content">
+            <div id="ints_ch_content">
                 Here is some content that has to change
-                <!-- <button type="button" onclick="changeInterests()">Change Content</button> -->
             </div>
             <div class="subcontent_nav center">
-                <button type="button" id="dec_ints_butt" class="trans_butt unsel_butt" onclick="decrementInterests()"> < </button>
-                <button type="button" id="ints_1_butt" class="trans_butt unsel_butt" onclick="changeInterests(1)"> • </button>
-                <button type="button" id="ints_2_butt" class="trans_butt unsel_butt" onclick="changeInterests(2)"> • </button>
-                <button type="button" id="ints_3_butt" class="trans_butt unsel_butt" onclick="changeInterests(3)"> • </button>
-                <button type="button" id="dec_ints_butt" class="trans_butt unsel_butt" onclick="incrementInterests()"> > </button>
+                <button type="button" id="dec_ints_butt" class="butt unsel_butt" onclick="decrement_subcontent('ints')"> < </button>                
+                <button type="button" id="ints_1_butt" class="butt unsel_butt" onclick="changeInterests(1)"> • </button>
+                <button type="button" id="ints_2_butt" class="butt unsel_butt" onclick="changeInterests(2)"> • </button>
+                <button type="button" id="ints_3_butt" class="butt unsel_butt" onclick="changeInterests(3)"> • </button>
+                <button type="button" id="dec_ints_butt" class="butt unsel_butt" onclick="increment_subcontent('ints')"> > </button>
             </div>
         </div>
     </div>
-    <div class="philosophies content_section center">
+    <div class="philosophies content_section center rounded">
+        <text class="my_h1"> Philosophies </text>
+        <div class="content">
+            <div id="ints_ch_content">
+                Here is some content that has to change
+            </div>
+            <div class="subcontent_nav center">
+                <button type="button" id="dec_phils_butt" class="butt unsel_butt" onclick="decrement_subcontent('phils')"> < </button>                
+                <button type="button" id="phils_1_butt" class="butt unsel_butt" onclick="change_subcontent('phils', 1)"> • </button>
+                <button type="button" id="phils_2_butt" class="butt unsel_butt" onclick="change_subcontent('phils', 2)"> • </button>
+                <button type="button" id="phils_3_butt" class="butt unsel_butt" onclick="change_subcontent('phils', 3)"> • </button>
+                <button type="button" id="dec_phils_butt" class="butt unsel_butt" onclick="increment_subcontent('ints')"> > </button>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
