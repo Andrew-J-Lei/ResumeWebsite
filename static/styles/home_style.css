@@ -54,8 +54,8 @@ div.nav_bar.row:after {
 
 .home_bg{
   background-image: url("https://andrewleiwebresources.blob.core.windows.net/website-resources/iceberg-01.png");
-  width: 100%;
-  height:420%;
+  width: 1265px;
+  height:2400px;
   padding:0px;
   position:absolute;
   background-position: center;
@@ -111,7 +111,7 @@ div.subcontent{
   top:20px;
   /*height:85%;*/
   /*% not working for height*/
-  height:290px;
+  height:285px;
   width:100%;
   z-index: 0;
 }
@@ -282,13 +282,28 @@ div.intro{
   width: 133%;
 }
 
+#bubbles_container{
+  position:absolute;
+  top:470px;
+  height:800px;
+  width:100%;
+  z-index:100;
+}
+
+#bubbles{
+  display:none;
+  opacity:1;
+  height:700px;
+  width:1260px;
+}
+
 
 /*----------------------------------- Credits --------------------------------*/
 
-div.credentials{
-  top:3%;
+.credentials{
+  top:100px;
   position:relative;
-  height:8%;
+  height:160px;
   width:80%;
   z-index: 0;
 }
@@ -336,10 +351,10 @@ div.credentials{
 
 /*----------------------------------- Interests ------------------------------*/
 
-div.interests{
-  top:11%;
+.interests{
+  top:330px;
   position:relative;
-  height:17%;
+  height:400px;
   width:80%;
   z-index: 0;
 }
@@ -347,10 +362,10 @@ div.interests{
 
 /*--------------------------------- Philosophies -----------------------------*/
 
-div.philosophies{
-  top:22%;
+.philosophies{
+  top:530px;
   position:relative;
-  height:17%;
+  height:400px;
   width:80%;
   z-index: 0;
 }

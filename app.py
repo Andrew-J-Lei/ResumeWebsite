@@ -1,6 +1,7 @@
 import flask
 from flask import Flask, render_template, request
 import urllib
+import os
 
 # My page library
 
@@ -32,6 +33,11 @@ def interests_2():
 def interests_3():
     return "sucka3"
     # return render_template('ajax/interests_1.html')
+
+@app.route('/bubbles/<num>')
+def get_bubble(num):
+    return (os.getcwd())
+    # return send_file(filename, mimetype='image/gif')
 
 
 if __name__ == '__main__':
