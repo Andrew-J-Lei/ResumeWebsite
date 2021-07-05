@@ -20,19 +20,9 @@ def dynamic_page():
     return rand_num
 
 
-@app.route("/ints_1.html", methods=['GET','POST'])
-def interests_1():
-    return render_template('ajax/ints_1.html')
-
-@app.route("/ints_2.html", methods=['GET','POST'])
-def interests_2():
-    return "sucka2"
-    # return render_template('ajax/interests_1.html')
-
-@app.route("/ints_3.html", methods=['GET','POST'])
-def interests_3():
-    return "sucka3"
-    # return render_template('ajax/interests_1.html')
+@app.route("/ints/<num>", methods=['GET','POST'])
+def interests(num):
+    return render_template('ajax/ints_'+num+'.html')
 
 @app.route('/bubbles/<num>')
 def get_bubble(num):

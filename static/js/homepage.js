@@ -1,6 +1,141 @@
 // Functions and variables ------------------------------------------------------------------------
 
-var subcontent_dict = {'num_ints':3, 'curr_ints':1, 'num_phils':1, 'curr_phils':1}
+var subcontent_dict = {'num_ints':3, 'curr_ints':1, 'num_phils':1, 'curr_phils':1};
+
+async function type_effect(el, string, max_stutter){
+  for(let i=0; i < string.length; i++){
+    var last_index = el.innerHTML.length;7
+    if (i !=0)
+      el.innerHTML = el.innerHTML.substring(0, last_index - 2);
+    else
+      el.innerHTML = el.innerHTML.substring(0, last_index - 1);
+    el.innerHTML += string[i];
+    el.innerHTML += '|"';
+    await sleep(max_stutter);
+  }
+  el.innerHTML = el.innerHTML.substring(0, last_index - 1);
+  el.innerHTML += '"';
+}
+
+async function delete_effect(el, max_stutter, delete_len){
+  var total_len = el.innerHTML.length;
+  for(let i=0; i < delete_len-2; i++){
+    // console.log(el.innerHTML);
+    var last_index = el.innerHTML.length;
+    if (i == 0)
+      el.innerHTML = el.innerHTML.substring(0, last_index - 2);
+    else
+      el.innerHTML = el.innerHTML.substring(0, last_index - 3);
+    el.innerHTML += '|"';
+    await sleep(max_stutter);
+  }
+  el.innerHTML = el.innerHTML.substring(0, last_index - 3);
+  el.innerHTML += '"';
+}
+
+async function idle_effect(el, length){
+  var delay = 400;
+  var d = new Date();
+  var time = d.getTime();
+  while (d.getTime() < time+length){
+    d = new Date();
+    var last_index = el.innerHTML.length;
+    el.innerHTML = el.innerHTML.substring(0, last_index - 1);
+    el.innerHTML += '|"'
+    await sleep(delay);
+    el.innerHTML = el.innerHTML.substring(0, last_index - 1);
+    el.innerHTML += '"'
+    await sleep(delay);
+  }
+}
+
+// async function expand_X(el1,el2, inc_time){
+//   // // while(el1.)
+//   // // console.log(el1.style.height);
+//   // console.log(el1.style);
+//   // // console.log(el2.style.height);
+//   // console.log(el2.style);
+//   while(el1.style.width <= el2.style.width){
+//     el1.style.width 
+//   }
+// }
+
+// Intro Script
+async function introduce_myself(){
+  var string1 = 'Hello World!';
+  var string2 = ", my name is Andrew, and I\'m a computer engineer.";
+  var max_stutter_speed = 100;
+  var page = document.getElementsByClassName('home_bg')[0];
+  var nav_bar = document.getElementsByClassName('nav_bar')[0];
+  page.style.display = "none";
+  nav_bar.style.display = "none";
+  var intro_text = document.getElementById('intro_text');
+  
+  // intro_text.innerHTML = '""';
+  // var buffer;
+  // buffer = await idle_effect(intro_text, 500);
+  // // await sleep(1000);
+  // buffer = await type_effect(intro_text, string1, max_stutter_speed);
+  // // // await sleep(1000);
+  // buffer = await idle_effect(intro_text, 500);
+  // // await sleep(1400);
+  // buffer = await delete_effect(intro_text, max_stutter_speed/3, 9);
+  // buffer = await idle_effect(intro_text, 500);
+  // buffer = await type_effect(intro_text, string2, max_stutter_speed);
+  // buffer = await idle_effect(intro_text, 300);
+
+  page.style.opacity=0;
+  page.style.display = "inline";
+  var inc_time = 15;
+  for (let i=0; i <= 100; i++){
+    var opacity = 0.01 * i;
+    page.style.opacity = opacity;
+    await sleep(inc_time);
+  }
+  await sleep(300);
+
+  anime({
+    targets: '#hider',
+    width: '1265px',
+    height: '2400px',
+    top:'0px',
+    left:'0px',
+    duration: 1500,
+    easing:"linear",
+    borderRadius: "0%"
+  });
+
+  anime({
+    targets: '#hider',
+    duration: 3000,
+    easing:"linear",
+    borderRadius: "0%"
+  });
+
+
+  anime({
+    targets: '.home_bg',
+    top:'0px',
+    left:'0px',
+    duration: 1500,
+    easing:"linear",
+  });
+
+
+  await sleep(3000);
+  hider.style.overflow = "visible";
+  page.style.display = "block";
+
+  nav_bar.style.opacity=0;
+  nav_bar.style.display="block"
+  inc_time = 5;
+  for (let i=0; i <= 100; i++){
+    var opacity = 0.01 * i;
+    nav_bar.style.opacity=opacity;
+    await sleep(inc_time);
+  }
+}
+
 
 // AJAX for Interests home page
 function change_subcontent(type, sub_num) {
@@ -8,7 +143,7 @@ function change_subcontent(type, sub_num) {
   xhttp.onload = function() {
     document.getElementById(type+"_ch_content").innerHTML = this.responseText;
   }
-  xhttp.open("GET", type+'_'+sub_num+".html");
+  xhttp.open("GET", type+'/'+sub_num);
   xhttp.send();
   var targ_butt = document.getElementById(type+'_'+sub_num+'_butt');
   targ_butt.classList.remove("unsel_butt");
@@ -38,7 +173,8 @@ function increment_subcontent(type) {
   change_subcontent(type,subcontent_dict['curr_'+type]);
 }
 
-function onload_homepage(){
+async function onload_homepage(){
+  await introduce_myself();
   curr_ints = 1;
   change_subcontent('ints',curr_ints);
   // Hide all svgs
@@ -62,7 +198,7 @@ async function animate_bubbles(){
   for (let i=1; i <= bubble_frames; i++){
     var img_src = "https://andrewleiwebresources.blob.core.windows.net/website-resources/bubbles_"+i+".png"
     bubble_el.setAttribute("src", img_src)
-    await sleep(120);
+    await sleep(130);
   }
   bubble_el.style.display="none";
 }
@@ -97,7 +233,7 @@ async function wind_all(chance, sleep_time) {
   // Returns 0 - max
   const wind_freqs = [5,3,2,6,2];
   const offset_1s = [0,0,0,0,0];
-  const offset_2s = [0,-1600, -1800,-1800,-2000];
+  const offset_2s = [-1800,-1600, -1800,-1800,-2000];
   for (let i=0; i < wind_freqs.length; i++) {
     var activation = Math.floor(Math.random() * chance);
     // console.log("Deciding wind_"+i);
@@ -115,9 +251,9 @@ var wave_active = [false, false, false, false, false, false];
 async function wave_rand(i){
   wave_active[i] = true;
   var this_wave = document.getElementsByClassName("wave_appearance")[i];
-  this_wave.style.display = "block";
+  this_wave.style.display = "inline-block";
   // Semi Random Position (Has to appear within wavy area)
-  var max_y = 150;
+  var max_y = 75;
   var min_y = 0;
   this_wave.style.top = Math.floor(Math.random() * (max_y - min_y) + min_y);
   var max_x = 800;
@@ -196,19 +332,13 @@ async function wave_all(chance, sleep_time) {
 // document.documentElement.dataset.bubbles = false;
 var bubbles_activated = false;
 document.addEventListener("scroll", () => {
-  var bubble_thresh = 200;
-  // document.documentElement.dataset.scroll = window.scrollY;
-  // document.documentElement.dataset.bubbles = (window.scrollY > 400);
-  console.log("Listening for events")
-  // if ((document.documentElement.dataset.bubbles == false) & (document.documentElement.dataset.scroll >= bubble_thresh)){
-  // console.log(bubbles_activated && window.scrollY > bubble_thresh);
+  var bubble_thresh = 500;
   if (!bubbles_activated && window.scrollY >= bubble_thresh){
     bubbles_activated = true;
     console.log("True bubbles");
     animate_bubbles();
   }
 });
-
 
 onload_homepage();
 // var loc = window.location.pathname;

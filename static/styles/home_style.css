@@ -25,7 +25,7 @@ html:not([data-fixed='false']) div.nav_bar.center{
 div.nav_bar.center{
   position: fixed; 
   top: 0px;
-  z-index: 2;
+  z-index: 1000;
   border: none;
   font-size: 12px;
   background-color: #282A35;
@@ -52,8 +52,21 @@ div.nav_bar.row:after {
 
 /*------------------------------------- Home Page ----------------------------*/
 
+#hider{
+  overflow:hidden;
+  position:absolute;
+  top:95px;
+  left:170px;
+  width:120px;
+  height:120px;
+  z-index:50;
+  border-radius: 50%;
+}
+
 .home_bg{
   background-image: url("https://andrewleiwebresources.blob.core.windows.net/website-resources/iceberg-01.png");
+  top:-95px;
+  left:-170px;
   width: 1265px;
   height:2400px;
   padding:0px;
@@ -181,6 +194,7 @@ div.subcontent_nav{
 
 /*------------------------------------- Intro --------------------------------*/
 
+
 div.intro{
   position: relative;
   top:2%;
@@ -198,7 +212,7 @@ div.intro{
   top:30%;
   font-size: 400%;
   overflow: auto;
-  z-index: 0;
+  z-index: 100;
 }
 
 
@@ -241,9 +255,9 @@ div.intro{
 }
 
 
-#wavy_area{
+.wavy_area{
   position:absolute;
-  top:423px;
+  top:410px;
   height:75px;
   width:100%;
 }
@@ -254,6 +268,7 @@ div.intro{
   /*fill:white;*/
   height:100px;
   width:200px;
+  /*display:inline-block;*/
 }
 
 .wave_path{
@@ -261,6 +276,7 @@ div.intro{
   /*stroke:white;*/
   fill: DeepSkyBlue;
   opacity: 0.6;
+  /*display:inline-block;*/
 }
 
 #intro_img_wrap{
