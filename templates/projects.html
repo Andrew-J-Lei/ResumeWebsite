@@ -2,102 +2,100 @@
 
 {% block content %}
 
-<div id="intro_wrap"></div>
-<div id="hider">
-    <div class="home_bg">
-        <div class="intro">
-            <div id="intro_img_wrap">
-                <img id="prof_pic" src="https://andrewleiwebresources.blob.core.windows.net/website-resources/1565203348035.jfif" alt="Andrew Lei">
+<div id="intro_wrap">
+    
+</div>
+<div id="personal_projects">
+    <text class="section_intro" id="personal_label">
+        Personal Projects
+    </text>
+    <div id="lit_show" class="personal content_section project center rounded">
+        <text class="my_h1">
+            Music Reactive LEDs
+        </text>
+        <div class="content">
+            <div id="ints_ch_content">
+                Here is some content that has to change
             </div>
-            <div id="windy_area">
-                <svg  height="400" width="100%">
-                    <path class="wind_path wind_0" d="M0.3,36.3c46.3-10.6,137.8-44.4,223-33.8s203.8,72.8,303.2,68.9s247.5-47.7,420.2-47 s335.1,19.9,355,19.9">
-                    </path>
-                    <path class=" wind_path wind_1" d="M0.3,96.6c0,0,160.9,58.9,291.5,62.9s98.7-87.7,62.9-87.9c-35.8-0.2-67.7,13.1-67.7,34.9 s40.6,68.9,116.2,81.5S662.7,86,805.9,80c143.3-6,298.6,107.9,492.4,131.1"/>
-                    <path class=" wind_path wind_2" d="M0.3,197.2c0,0,92.5-49.7,264.4-17.2s208.5,59.6,269,56.3c60.5-3.3,101.1-98,215.7-107.3 s115.4,50.3,108.2,70.2s-34.2,47-86.8,45c-52.5-2-94.1-17.8-101.1-53c-6.9-35.1,89.1-73.5,159.2-71.5s105.1,57,224.4,100 c65.8,23.7,193.1,27.8,244.8,14.6"
-                    />
-                    <path class="wind_path wind_3" d="M0.3,223.1c0,0,163.3,55.6,322.5,64.2s337.5,9.3,426.6-16.6s414-29.8,548.9,8.6"/>
-                    <path class="wind_path wind_4" d="M0.3,298.6c0,0,39.2-37.1,98-21.2s8,48.3-17.5,37.7c-25.5-10.6-23.1-47.7,65.3-31.8 s46.2,58.3,235.6,79.5c189.4,21.2,45.4-75.5,26.3-44.7s25.5,37.4,97.9,38.1c72.4,0.7,177.3-51.7,295.3-53.6 c59.8-1,29.7,55.8,163.8,35.8c105.5-15.7,105.5-15.7,117.6-41.6c13.9-29.8-37.9-40.7-96.8-28.8s20.1,97.5,217.3,82.9 c55.2-4.1,95.2-14,95.2-14"/>
-                </svg>
-            </div>
-            <div class="wavy_area">
-                <svg class="wave_appearance">
-                    <path class="wave_path" />
-                </svg>
-                <svg class="wave_appearance">
-                    <path class="wave_path" />
-                </svg>
-                <svg class="wave_appearance">
-                    <path class="wave_path"  />
-                </svg>
-                <svg class="wave_appearance">
-                    <path class="wave_path" />
-                </svg>
-                <svg class="wave_appearance">
-                    <path class="wave_path" />
-                </svg>
-                <svg class="wave_appearance">
-                    <path class="wave_path"  />
-                </svg>
-            </div>
-            <div id="bubbles_container">
-                <img id="bubbles" alt="bubble_animation">
+            <div class="subcontent_nav center">
+                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="decrement_subcontent('sdp')"> < </button>                
+                <button type="button" id="sdp_1_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 1)"> • </button>
+                <button type="button" id="sdp_2_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 2)"> • </button>
+                <button type="button" id="sdp_3_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 3)"> • </button>
+                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('sdp')"> > </button>
             </div>
         </div>
-        <div class="credentials content_section center rounded">
-            <text class="my_h1"> Formal Credentials </text>
-            <div class="content">
-                <div class="in_content">
-                    <div id="UCSC_logo_wrap">
-                        <img id="UCSC_logo" src="https://andrewleiwebresources.blob.core.windows.net/website-resources/UCSC-Logo.png" alt="UCSC Logo">
-                    </div>
-                    <div id="creds_text_fields">
-                        <text>
-                            Alma Mater: <br />
-                            Major: <br />
-                            Time of Graduation: <br />
-                            Formal Experiences: <br />
-                        </text>
-                    </div>
-                    <div id="creds_text_answers_wrapper">
-                        <text>
-                            UC Santa Cruz <br />
-                            Computer Engineering - Robotics Focus <br />
-                            Summer 2020 <br />
-                            NONE <br />
-                        </text>
-                    </div>
-                </div>
+    </div>
+    <div id="anal_bot" class="personal content_section project center rounded">
+        <text class="my_h1">
+            Technical Analysis Machine Learning Model
+        </text>
+        <div class="content">
+            <div id="ints_ch_content">
+                Here is some content that has to change
+            </div>
+            <div class="subcontent_nav center">
+                <button type="button" id="dec_anal_bot_butt" class="butt unsel_butt" onclick="decrement_subcontent('anal_bot')"> < </button>                
+                <button type="button" id="anal_bot_1_butt" class="butt unsel_butt" onclick="change_subcontent('anal_bot', 1)"> • </button>
+                <button type="button" id="anal_bot_2_butt" class="butt unsel_butt" onclick="change_subcontent('anal_bot', 2)"> • </button>
+                <button type="button" id="anal_bot_3_butt" class="butt unsel_butt" onclick="change_subcontent('anal_bot', 3)"> • </button>
+                <button type="button" id="anal_bot_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('anal_bot')"> > </button>
             </div>
         </div>
-        <div class="interests content_section center rounded">
-            <text class="my_h1"> Professional Interests </text>
-            <div class="content">
-                <div id="ints_ch_content">
-                    Here is some content that has to change
-                </div>
-                <div class="subcontent_nav center">
-                    <button type="button" id="dec_ints_butt" class="butt unsel_butt" onclick="decrement_subcontent('ints')"> < </button>                
-                    <button type="button" id="ints_1_butt" class="butt unsel_butt" onclick="changeInterests(1)"> • </button>
-                    <button type="button" id="ints_2_butt" class="butt unsel_butt" onclick="changeInterests(2)"> • </button>
-                    <button type="button" id="ints_3_butt" class="butt unsel_butt" onclick="changeInterests(3)"> • </button>
-                    <button type="button" id="dec_ints_butt" class="butt unsel_butt" onclick="increment_subcontent('ints')"> > </button>
-                </div>
+    </div>
+    <div id="ResumeWebsite" class="personal content_section project center rounded">
+        <text class="my_h1">
+            Resume Website
+        </text>
+        <div class="content">
+            <div id="ints_ch_content">
+                Here is some content that has to change
+            </div>
+            <div class="subcontent_nav center">
+                <button type="button" id="dec_resume_butt" class="butt unsel_butt" onclick="decrement_subcontent('resume')"> < </button>                
+                <button type="button" id="resume_1_butt" class="butt unsel_butt" onclick="change_subcontent('resume', 1)"> • </button>
+                <button type="button" id="resume_2_butt" class="butt unsel_butt" onclick="change_subcontent('resume', 2)"> • </button>
+                <button type="button" id="resume_3_butt" class="butt unsel_butt" onclick="change_subcontent('resume', 3)"> • </button>
+                <button type="button" id="resume_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('resume')"> > </button>
             </div>
         </div>
-        <div class="philosophies content_section center rounded">
-            <text class="my_h1"> Philosophies </text>
-            <div class="content">
-                <div id="ints_ch_content">
-                    Here is some content that has to change
-                </div>
-                <div class="subcontent_nav center">
-                    <button type="button" id="dec_phils_butt" class="butt unsel_butt" onclick="decrement_subcontent('phils')"> < </button>                
-                    <button type="button" id="phils_1_butt" class="butt unsel_butt" onclick="change_subcontent('phils', 1)"> • </button>
-                    <button type="button" id="phils_2_butt" class="butt unsel_butt" onclick="change_subcontent('phils', 2)"> • </button>
-                    <button type="button" id="phils_3_butt" class="butt unsel_butt" onclick="change_subcontent('phils', 3)"> • </button>
-                    <button type="button" id="dec_phils_butt" class="butt unsel_butt" onclick="increment_subcontent('ints')"> > </button>
-                </div>
+    </div>
+</div>
+<div id="school_projects">
+    <text class="section_intro" id="school_label">
+        School Projects
+    </text>
+    <div id="SDP" class="school content_section project center rounded">
+        <text class="my_h1"> 
+            Senior Design Project - Assistive Self-Stabilizing Robot
+        </text>
+        <div class="content">
+            <div id="ints_ch_content">
+                Here is some content that has to change
+            </div>
+            <div class="subcontent_nav center">
+                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="decrement_subcontent('sdp')"> < </button>                
+                <button type="button" id="sdp_1_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 1)"> • </button>
+                <button type="button" id="sdp_2_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 2)"> • </button>
+                <button type="button" id="sdp_3_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 3)"> • </button>
+                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('sdp')"> > </button>
+            </div>
+        </div>
+    </div>
+    <div id="ECE118" class="school content_section project center rounded">
+        <text class="my_h1"> 
+            Mechatronics Final Project - Autonomous Robot
+        </text>
+        <div class="content">
+            <div id="ints_ch_content">
+                Here is some content that has to change
+            </div>
+            <div class="subcontent_nav center">
+                <button type="button" id="dec_ECE118_butt" class="butt unsel_butt" onclick="decrement_subcontent('ECE118')"> < </button>                
+                <button type="button" id="ECE118_1_butt" class="butt unsel_butt" onclick="change_subcontent('ECE118', 1)"> • </button>
+                <button type="button" id="ECE118_2_butt" class="butt unsel_butt" onclick="change_subcontent('ECE118', 2)"> • </button>
+                <button type="button" id="ECE118_3_butt" class="butt unsel_butt" onclick="change_subcontent('ECE118', 3)"> • </button>
+                <button type="button" id="ECE118_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('ECE118')"> > </button>
             </div>
         </div>
     </div>
@@ -105,7 +103,6 @@
 {% endblock %}
 
 {% block jscss %}
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-<script type="text/javascript" src="{{url_for('static', filename='js/homepage.js') }}"></script>
-<link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/home_style.css') }}">
+<script type="text/javascript" src="{{url_for('static', filename='js/projects.js') }}"></script>
+<link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/project_style.css') }}">
 {% endblock %}

@@ -12,8 +12,3 @@ Projects
 Mind matrix
     - TEMPLATE
     - At least 30 thoughts for now
-
-Animations
-    - Homepage intro
-    - Animating appearance of letters?
-    - Spongebob bubbles

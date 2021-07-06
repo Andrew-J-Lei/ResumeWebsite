@@ -22,6 +22,10 @@ def projects():
 def interests(num):
     return render_template('ajax/ints_'+num+'.html')
 
+@app.route("/phils/<num>", methods=['GET','POST'])
+def philosophies(num):
+    return render_template('ajax/phils_'+num+'.html')
+
 @app.route('/bubbles/<num>')
 def get_bubble(num):
     return (os.getcwd())

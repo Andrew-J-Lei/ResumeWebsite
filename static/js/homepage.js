@@ -1,6 +1,6 @@
 // Functions and variables ------------------------------------------------------------------------
 
-var subcontent_dict = {'num_ints':3, 'curr_ints':1, 'num_phils':1, 'curr_phils':1};
+var subcontent_dict = {'num_ints':3, 'curr_ints':1, 'num_phils':3, 'curr_phils':1};
 
 async function type_effect(el, string, max_stutter){
   for(let i=0; i < string.length; i++){
@@ -65,6 +65,7 @@ async function introduce_myself(){
   var string1 = 'Hello World!';
   var string2 = ", my name is Andrew, and I\'m a computer engineer.";
   var max_stutter_speed = 100;
+  var hider = document.getElementById('hider');
   var page = document.getElementsByClassName('home_bg')[0];
   var nav_bar = document.getElementsByClassName('nav_bar')[0];
   page.style.display = "none";
@@ -177,6 +178,8 @@ async function onload_homepage(){
   await introduce_myself();
   curr_ints = 1;
   change_subcontent('ints',curr_ints);
+  curr_phils = 1;
+  change_subcontent('phils',curr_phils);
   // Hide all svgs
   var wind_paths = document.getElementsByClassName("wind_path");
   for (let i=0; i < wind_paths.length; i++)
@@ -348,7 +351,7 @@ var wind_chance = 40;
 var wind_sleep_time = 100;
 const wind1 = wind_all(wind_chance, wind_sleep_time);
 
-var wave_chance = 100;
+var wave_chance = 200;
 var wave_sleep_time = 100;
 const wave1 = wave_all(wave_chance, wave_sleep_time);
 
