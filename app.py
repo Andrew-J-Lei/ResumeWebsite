@@ -14,11 +14,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html', title='Home | AndrewLei4Hire')
 
-def dynamic_page():
-    seed = random.seed()
-    rand_num = random.randrange(0,10)
-    return rand_num
-
+@app.route("/projects", methods=['GET','POST'])
+def projects():
+    return render_template('projects.html', title='Projects | AndrewLei4Hire')
 
 @app.route("/ints/<num>", methods=['GET','POST'])
 def interests(num):

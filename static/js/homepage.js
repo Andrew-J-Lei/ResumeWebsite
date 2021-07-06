@@ -71,18 +71,18 @@ async function introduce_myself(){
   nav_bar.style.display = "none";
   var intro_text = document.getElementById('intro_text');
   
-  // intro_text.innerHTML = '""';
-  // var buffer;
-  // buffer = await idle_effect(intro_text, 500);
+  intro_text.innerHTML = '""';
+  var buffer;
+  buffer = await idle_effect(intro_text, 500);
+  // await sleep(1000);
+  buffer = await type_effect(intro_text, string1, max_stutter_speed);
   // // await sleep(1000);
-  // buffer = await type_effect(intro_text, string1, max_stutter_speed);
-  // // // await sleep(1000);
-  // buffer = await idle_effect(intro_text, 500);
-  // // await sleep(1400);
-  // buffer = await delete_effect(intro_text, max_stutter_speed/3, 9);
-  // buffer = await idle_effect(intro_text, 500);
-  // buffer = await type_effect(intro_text, string2, max_stutter_speed);
-  // buffer = await idle_effect(intro_text, 300);
+  buffer = await idle_effect(intro_text, 500);
+  // await sleep(1400);
+  buffer = await delete_effect(intro_text, max_stutter_speed/3, 9);
+  buffer = await idle_effect(intro_text, 500);
+  buffer = await type_effect(intro_text, string2, max_stutter_speed);
+  buffer = await idle_effect(intro_text, 300);
 
   page.style.opacity=0;
   page.style.display = "inline";
