@@ -49,17 +49,6 @@ async function idle_effect(el, length){
   }
 }
 
-// async function expand_X(el1,el2, inc_time){
-//   // // while(el1.)
-//   // // console.log(el1.style.height);
-//   // console.log(el1.style);
-//   // // console.log(el2.style.height);
-//   // console.log(el2.style);
-//   while(el1.style.width <= el2.style.width){
-//     el1.style.width 
-//   }
-// }
-
 // Intro Script
 async function introduce_myself(){
   var string1 = 'Hello World!';
@@ -130,13 +119,26 @@ async function introduce_myself(){
   nav_bar.style.opacity=0;
   nav_bar.style.display="block"
   inc_time = 5;
-  for (let i=0; i <= 100; i++){
+  for (let i=0; i <= 80; i++){
     var opacity = 0.01 * i;
     nav_bar.style.opacity=opacity;
     await sleep(inc_time);
   }
+
+  await sleep(500);
+  var help = document.getElementById("help");
+  inc_time = 8;
+  for (let i=0; i <= 100; i++){
+    var opacity = 0.01 * i;
+    help.style.opacity=opacity;
+    await sleep(inc_time);
+  }
 }
 
+function xout_help(){
+  console.log("Xing out")
+  document.getElementById("help").style.display = "none";
+}
 
 // AJAX for Interests home page
 function change_subcontent(type, sub_num) {

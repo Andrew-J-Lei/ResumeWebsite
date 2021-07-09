@@ -3,12 +3,16 @@
 <head>
     <title>{{ title }}</title>
     <!-- <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style_1.css') }}"> -->
-    {{ stylesheet }}
-    {{ js }}
-    <!-- <script type="text/javascript" src="{{url_for('static', filename='js/scroll.js') }}"></script> -->
+    <!-- <script type="text/javascript" src="{{url_for('static', filename='js/window_block.js') }}"></script> -->
+<!--     Set-Cookie: _gcl_au=1; SameSite=Lax
+    Set-Cookie: _ga=Lax=2; SameSite=Lax
+    Set-Cookie: giphy_session_id=3; SameSite=Lax
+    Set-Cookie: _ga=4; SameSite=Lax
+    Set-Cookie: _gid=5; SameSite=Lax
+    Set-Cookie: __gads=6; SameSite=Lax -->
 </head>
 <body>
-    <div class="nav_bar center">
+    <div id="site_nav_bar" class="nav_bar center">
         <div class="nav_bar row">
             <div class="nav_bar column">
                 <a href="https://andrewlei4hire.azurewebsites.net/">
@@ -16,10 +20,10 @@
                 </a>
             </div>
             <div class="nav_bar column">
-                <a href="https://andrewlei4hire.azurewebsites.net/projects">Projects</a>
+                <a href="https://andrewlei4hire.azurewebsites.net/projects" style="text-decoration:none; color:white">Projects</a>
             </div>
-            <div class="nav_bar column">
-                <a href="https://andrewlei4hire.azurewebsites.net/matrix">Matrix</a>
+            <div class="nav_bar column" id="makethiswhite">
+                <a href="https://andrewlei4hire.azurewebsites.net/matrix" style="text-decoration:none; color:white">Matrix</a>
             </div>
             <div class="nav_bar column" id="contact">
                 <div id="email"> Contact Me! - andrew.j.lei.31@gmail.com</div>
@@ -29,6 +33,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="{{url_for('static', filename='js/window_block.js') }}"></script>
     {% block content %}{% endblock %}
     {% block jscss %}{% endblock %}
 </body>

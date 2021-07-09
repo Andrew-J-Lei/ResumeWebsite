@@ -1,0 +1,13 @@
+// _gcl_au.SameSite=Lax;
+// _ga.SameSite=Lax;
+// _gid.SameSite=Lax;
+// giphy_session_id.SameSite=Lax;
+// _ga.SameSite=Lax;
+// _gid.SameSite=Lax;
+// __gads.SameSite=Lax;
+// Set-Cookie: <_gcl_au>=<Lax>
+// Set-Cookie: <_ga>=<Lax>
+// Set-Cookie: <giphy_session_id>=<Lax>
+// Set-Cookie: <_ga>=<Lax>
+// Set-Cookie: <_gid>=<Lax>
+// Set-Cookie: <__gads>=<Lax>
