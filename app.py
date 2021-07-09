@@ -3,13 +3,12 @@ from flask import Flask, render_template, request
 import urllib
 import os
 
-# My page library
-
 # For random tests
 import random
 
 app = Flask(__name__)
 
+# ------------------------------------------- Pages -----------------------------------------------
 @app.route("/", methods=['GET','POST'])
 def home():
     return render_template('home.html', title='Home | AndrewLei4Hire')
@@ -17,6 +16,12 @@ def home():
 @app.route("/projects", methods=['GET','POST'])
 def projects():
     return render_template('projects.html', title='Projects | AndrewLei4Hire')
+
+@app.route("/matrix", methods=['GET','POST'])
+def matrix():
+    return render_template('matrix.html', title='Matrix | AndrewLei4Hire')
+
+# --------------------------------------- Homepage AJAX -------------------------------------------
 
 @app.route("/ints/<num>", methods=['GET','POST'])
 def interests(num):
@@ -26,10 +31,28 @@ def interests(num):
 def philosophies(num):
     return render_template('ajax/phils_'+num+'.html')
 
-@app.route('/bubbles/<num>')
-def get_bubble(num):
-    return (os.getcwd())
-    # return send_file(filename, mimetype='image/gif')
+
+# --------------------------------------- Projects AJAX -------------------------------------------
+
+@app.route("/lit_show/<num>", methods=['GET','POST'])
+def lit_show(num):
+    return render_template('ajax/lit_show_'+num+'.html')
+
+@app.route("/anal_bot/<num>", methods=['GET','POST'])
+def anal_bot(num):
+    return render_template('ajax/anal_bot_'+num+'.html')
+
+@app.route("/ResumeWebsite/<num>", methods=['GET','POST'])
+def ResumeWebsite(num):
+    return render_template('ajax/ResumeWebsite_'+num+'.html')
+
+@app.route("/SDP/<num>", methods=['GET','POST'])
+def SDP(num):
+    return render_template('ajax/SDP_'+num+'.html')
+
+@app.route("/ECE118/<num>", methods=['GET','POST'])
+def ECE118(num):
+    return render_template('ajax/ECE118_'+num+'.html')
 
 
 if __name__ == '__main__':

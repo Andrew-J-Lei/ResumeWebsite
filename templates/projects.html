@@ -1,9 +1,13 @@
 {% extends 'basic_page.html' %}
 
 {% block content %}
-
 <div id="intro_wrap">
-    
+    <text id="page_intro">
+        Projects
+    </text>
+    <video id="intro_video" width="1260px" height="auto" autoplay muted loop>
+        <source src="https://andrewleiwebresources.blob.core.windows.net/website-resources/leds_poh.mp4" type="video/mp4">
+    </video>
 </div>
 <div id="personal_projects">
     <text class="section_intro" id="personal_label">
@@ -14,15 +18,16 @@
             Music Reactive LEDs
         </text>
         <div class="content">
-            <div id="ints_ch_content">
+            <div id="lit_show_ch_content">
                 Here is some content that has to change
             </div>
             <div class="subcontent_nav center">
-                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="decrement_subcontent('sdp')"> < </button>                
-                <button type="button" id="sdp_1_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 1)"> • </button>
-                <button type="button" id="sdp_2_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 2)"> • </button>
-                <button type="button" id="sdp_3_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 3)"> • </button>
-                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('sdp')"> > </button>
+                <button type="button" id="dec_lit_show_butt" class="butt unsel_butt" onclick="decrement_subcontent('lit_show')"> < </button>                
+                <button type="button" id="lit_show_1_butt" class="butt unsel_butt" onclick="change_subcontent('lit_show', 1)"> • </button>
+                <button type="button" id="lit_show_2_butt" class="butt unsel_butt" onclick="change_subcontent('lit_show', 2)"> • </button>
+                <button type="button" id="lit_show_3_butt" class="butt unsel_butt" onclick="change_subcontent('lit_show', 3)"> • </button>
+                <button type="button" id="lit_show_4_butt" class="butt unsel_butt" onclick="change_subcontent('lit_show', 4)"> • </button>
+                <button type="button" id="lit_show_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('lit_show')"> > </button>
             </div>
         </div>
     </div>
@@ -31,7 +36,7 @@
             Technical Analysis Machine Learning Model
         </text>
         <div class="content">
-            <div id="ints_ch_content">
+            <div id="anal_bot_ch_content">
                 Here is some content that has to change
             </div>
             <div class="subcontent_nav center">
@@ -39,6 +44,7 @@
                 <button type="button" id="anal_bot_1_butt" class="butt unsel_butt" onclick="change_subcontent('anal_bot', 1)"> • </button>
                 <button type="button" id="anal_bot_2_butt" class="butt unsel_butt" onclick="change_subcontent('anal_bot', 2)"> • </button>
                 <button type="button" id="anal_bot_3_butt" class="butt unsel_butt" onclick="change_subcontent('anal_bot', 3)"> • </button>
+                <button type="button" id="anal_bot_4_butt" class="butt unsel_butt" onclick="change_subcontent('anal_bot', 4)"> • </button>
                 <button type="button" id="anal_bot_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('anal_bot')"> > </button>
             </div>
         </div>
@@ -48,15 +54,16 @@
             Resume Website
         </text>
         <div class="content">
-            <div id="ints_ch_content">
+            <div id="ResumeWebsite_ch_content">
                 Here is some content that has to change
             </div>
             <div class="subcontent_nav center">
-                <button type="button" id="dec_resume_butt" class="butt unsel_butt" onclick="decrement_subcontent('resume')"> < </button>                
-                <button type="button" id="resume_1_butt" class="butt unsel_butt" onclick="change_subcontent('resume', 1)"> • </button>
-                <button type="button" id="resume_2_butt" class="butt unsel_butt" onclick="change_subcontent('resume', 2)"> • </button>
-                <button type="button" id="resume_3_butt" class="butt unsel_butt" onclick="change_subcontent('resume', 3)"> • </button>
-                <button type="button" id="resume_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('resume')"> > </button>
+                <button type="button" id="dec_ResumeWebsite_butt" class="butt unsel_butt" onclick="decrement_subcontent('ResumeWebsite')"> < </button>                
+                <button type="button" id="ResumeWebsite_1_butt" class="butt unsel_butt" onclick="change_subcontent('ResumeWebsite', 1)"> • </button>
+                <button type="button" id="ResumeWebsite_2_butt" class="butt unsel_butt" onclick="change_subcontent('ResumeWebsite', 2)"> • </button>
+                <button type="button" id="ResumeWebsite_3_butt" class="butt unsel_butt" onclick="change_subcontent('ResumeWebsite', 3)"> • </button>
+                <button type="button" id="ResumeWebsite_4_butt" class="butt unsel_butt" onclick="change_subcontent('ResumeWebsite', 4)"> • </button>
+                <button type="button" id="ResumeWebsite_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('ResumeWebsite')"> > </button>
             </div>
         </div>
     </div>
@@ -65,41 +72,59 @@
     <text class="section_intro" id="school_label">
         School Projects
     </text>
+    <div id="ECE118" class="school content_section project center rounded">
+        <text class="my_h1"> 
+            Mechatronics Final Project - Autonomous Robot
+        </text>
+        <div class="subcontent">
+            <div class="subcontent_img_wrapper" style="top:0 !important">
+                <span class="subcontent_img_wrapper">
+                    <img id="ECE118_bot_img" class="subcontent_img" src="https://andrewleiwebresources.blob.core.windows.net/website-resources/ece118_final.PNG">
+                    <text id="ECE118_label">
+                        <i>The only picture we had of our complete bot included me in it.</i>
+                    </text>
+                </span>
+            </div>
+            <div class="subcontent_text">
+                <span class="subcontent_text">
+                    The autonomous bot for our mechatronics final project had to remotely detect a beacon emitting a 2 kHz signal, navigate to it while avoiding black tape on the floor, detect the correct side of the beacon using a trackwire sensor, and deposit a ping pong ball into the correct whole as indicated by a black tape. 
+                    <br><br>
+                    I obtained much of my hardware skills from mechatronics; prior to this class, I had very little experience with hardware. Developing an algorithm for robot behavior that fits to specs, learning how hardware and sensors can be read in by microcontrollers, did wonders for my perspective on engineering. As an extremely hands-on experience, it opened my eyes to all that is required to make a complete working product.
+                    <br><br>
+                    The full documentation for our final mechatronics project can be found <a href="https://andrewleiwebresources.blob.core.windows.net/website-resources/ECE118_Final_Project.pdf" target="_blank">here</a>.
+                </span>
+            </div>
+        </div>
+    </div>
     <div id="SDP" class="school content_section project center rounded">
         <text class="my_h1"> 
             Senior Design Project - Assistive Self-Stabilizing Robot
         </text>
         <div class="content">
-            <div id="ints_ch_content">
-                Here is some content that has to change
-            </div>
-            <div class="subcontent_nav center">
-                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="decrement_subcontent('sdp')"> < </button>                
-                <button type="button" id="sdp_1_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 1)"> • </button>
-                <button type="button" id="sdp_2_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 2)"> • </button>
-                <button type="button" id="sdp_3_butt" class="butt unsel_butt" onclick="change_subcontent('sdp', 3)"> • </button>
-                <button type="button" id="dec_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('sdp')"> > </button>
-            </div>
-        </div>
-    </div>
-    <div id="ECE118" class="school content_section project center rounded">
-        <text class="my_h1"> 
-            Mechatronics Final Project - Autonomous Robot
-        </text>
-        <div class="content">
-            <div id="ints_ch_content">
-                Here is some content that has to change
-            </div>
-            <div class="subcontent_nav center">
-                <button type="button" id="dec_ECE118_butt" class="butt unsel_butt" onclick="decrement_subcontent('ECE118')"> < </button>                
-                <button type="button" id="ECE118_1_butt" class="butt unsel_butt" onclick="change_subcontent('ECE118', 1)"> • </button>
-                <button type="button" id="ECE118_2_butt" class="butt unsel_butt" onclick="change_subcontent('ECE118', 2)"> • </button>
-                <button type="button" id="ECE118_3_butt" class="butt unsel_butt" onclick="change_subcontent('ECE118', 3)"> • </button>
-                <button type="button" id="ECE118_sdp_butt" class="butt unsel_butt" onclick="increment_subcontent('ECE118')"> > </button>
+            <div id="SDP_ch_content">
+                <text class="my_h2">Overview</text>
+                <div class="subcontent">
+                    <div class="subcontent_img_wrapper">
+                        <span class="subcontent_img_wrapper">
+                            <img id="wave_svg_img" class="subcontent_img" src="https://andrewleiwebresources.blob.core.windows.net/website-resources/cad_sensors.PNG">
+                            <text>
+                                <i>CAD model and sensor placement</i>
+                            </text>
+                        </span>
+                    </div>
+                    <div class="subcontent_text">
+                        <span class="subcontent_text">
+                            For our senior design project, my group designed a self-balancing assistive robot. The robot could work as a cargo carrier for small loads of items, providing aid for those physically disabled or anyone that could use an extra hand. Despite that my group had to work remotely during the latter part of this project, we managed to create a satisfactory design.
+                            <br><br>
+                            I worked on the bot's behavior and ping sensor calibration and assisted with the ComputerVision aspect of it. My previous experience with hardware-software interaction and state machines allowed me to properly plan how the bot was going to detect changes in the physical environment and react accordingly. Since we could not make a physical prototype, we proved concepts through digital test environments and test benches.
+                            <br><br>
+                            The full documentation for our senior design project can be found <a href="https://andrewleiwebresources.blob.core.windows.net/website-resources/Final_Design_Document.pdf" target="_blank">here</a>.
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block jscss %}

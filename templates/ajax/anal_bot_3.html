@@ -1,0 +1,10 @@
+<text class="my_h2">Approaches</text>
+<div class="subcontent">
+    <div class="no_img subcontent_text">
+        <span class="no_img subcontent_text">
+            The first approach was including features in the past thirty days of a particular stock, particularly the open, high, low, close, volume, and sentiment. OHLCV could be downloaded in a convenient dataframe from the yfinance API. Sentiment could be obtained by webscraping DuckDuckGo, and feeding the title and description of the first ten news search results to a natural language processor from the target date. So for this initial approach, each example had 6*30 features. I trained a model with a somewhat generic structure and voila. The difference between the training error and cross validation error was abysmal. I realized that an issue with this approach is that it treated all examples as being equally significant, and as I was including every date in the past three years for each stock. There was going to be a lot of garbage. Okay, so new approach.
+            <br><br>
+            The second approach would use technical analysis indicators for features. Technical analysis indicators are already based off of previous dates, so if they actually worked, I wouldn't have to determine for myself which dates were significant; I could just rely on the indicator's signal. Technical analysts use some combination of indicators to predict a stock's direction. I would leave this up to the ML model. After all, ML models fundamentally find relationships between features and correlate it to the trained output. This theoretically matched.
+        </span>
+    </div>
+</div>
