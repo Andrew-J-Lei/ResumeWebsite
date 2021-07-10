@@ -13,20 +13,20 @@ div.nav_bar.center{
   z-index: 1000;
   border: none;
   font-size: 12px;
-  background-color: #000000;
-  /*color: #008000;*/
-  color:white;
+  background-color: #2980B9;
+  color: #f1f1f1;
   width: 102%;
   height:40px;
-  /*left:0px;*/
 }
 
 div.nav_bar.column {
   text-align: center;
   float: left;
-  width: calc(100%/5);
+  width: calc(100%/8);
   padding: 0px;
   z-index: 0;
+  border-style:/*solid;
+  border-color:#1434A*/4;
   height:37px;
   border-radius:0.5px;
   font-size: 14px;
@@ -34,6 +34,7 @@ div.nav_bar.column {
   display:table-cell;
   vertical-align: middle;
   margin-top:5px;
+  overflow:hidden;
 }
 
 #contact{
@@ -54,7 +55,7 @@ div.nav_bar.column {
 }
 
 #makethiswhite{
-  color:008000;
+  color:white;
   text-decoration:none;
   margin-top:5px;
 }
@@ -66,7 +67,6 @@ div.nav_bar.row:after {
   clear: both;
   z-index: 0;
 }
-
 /*-------------------------------------- Matrix ---------------------------------------*/
 
 #entire_page{

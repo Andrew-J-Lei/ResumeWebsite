@@ -22,7 +22,7 @@ div.nav_bar.center{
 div.nav_bar.column {
   text-align: center;
   float: left;
-  width: calc(100%/5);
+  width: calc(100%/8);
   padding: 0px;
   z-index: 0;
   border-style:/*solid;
@@ -34,6 +34,7 @@ div.nav_bar.column {
   display:table-cell;
   vertical-align: middle;
   margin-top:5px;
+  overflow:hidden;
 }
 
 #contact{

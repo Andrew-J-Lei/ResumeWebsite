@@ -11,9 +11,9 @@ function window_check(){
         blocker.style.width = window.innerWidth;
         // console.log("Bad window size");
         if (window.innerWidth > max_width){
-          warning += '<text style="font-size:150px">🠔</text> </text>';
+          warning += '<text style="font-size:150px"> < </text> </text>';
         } else {
-          warning += '<text style="font-size:150px">🠖</text> </text>';
+          warning += '<text style="font-size:150px"> > </text> </text>';
         }
         blocker.innerHTML = warning;
         blocker.style.display = "block";
