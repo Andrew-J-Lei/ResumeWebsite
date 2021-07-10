@@ -3,7 +3,7 @@ var okay_window;
 function window_check(){
     // console.log("Checking window size");
     var max_width = 1300;
-    var min_width = 900;
+    var min_width = 1000;
     // console.log(window.innerWidth)
     var warning = '<text style="top:100px"> My apologies, but unfortunately my site is optimized to specific window size of ~1200px. <br> \
     Please help me let you view the site by adjusting your window width this way <br>';
