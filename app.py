@@ -54,6 +54,12 @@ def SDP(num):
 def ECE118(num):
     return render_template('ajax/ECE118_'+num+'.html')
 
+# --------------------------------------- Matrix AJAX --------------------------------------------
+@app.route("/thoughts/<num>", methods=['GET','POST'])
+def thought(num):
+    return render_template('thoughts/thought_'+num+'.html')
+
+
 
 if __name__ == '__main__':
     # For debugging

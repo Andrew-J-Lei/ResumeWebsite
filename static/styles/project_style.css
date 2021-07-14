@@ -17,6 +17,7 @@ div.nav_bar.center{
   color: #f1f1f1;
   width: 102%;
   height:40px;
+  overflow:hidden;
 }
 
 div.nav_bar.column {
