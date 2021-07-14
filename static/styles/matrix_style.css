@@ -71,7 +71,7 @@ div.nav_bar.row:after {
 /*-------------------------------------- Matrix ---------------------------------------*/
 
 #entire_page{
-  width:1260px;
+  width:1280px;
   height:100%;
   /*background-image:"https://i.imgur.com/KPMZjI2.mp4";*/
   /*https://media0.giphy.com/media/w1UKu5wfqoW50owZqI/giphy.gif?cid=790b7611a1a4ba611364b46cb4108d40e3699a5e3476afd2&rid=giphy.gif&ct=g*/
@@ -80,7 +80,7 @@ div.nav_bar.row:after {
 
 #bg{
   height:100%;
-  width:100%;
+  width:1280px;
   position:absolute;
 }
 
