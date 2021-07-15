@@ -18,8 +18,6 @@ function new_thought() {
     xhttp.open("GET", 'thoughts/'+this_thought);
     xhttp.send();
 
-    curr_ind +=1;
-
     if (fresh_thoughts.length == 0){
         console.log("resetting");
         fresh_thoughts = Array.from(Array(num_thoughts).keys());
@@ -29,15 +27,15 @@ function new_thought() {
 }
 
 function next_thought(){
+    curr_ind +=1;
     if (curr_ind == old_thoughts.length){
         new_thought();
-    } else {
-        curr_ind += 1;
+    } else{
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function() {
             document.getElementById("thought").innerHTML = this.responseText;
         }
-        xhttp.open("GET", thought+'/'+ old_thoughts[curr_ind]);
+        xhttp.open("GET", 'thoughts/'+old_thoughts[curr_ind]);
         xhttp.send();
     }
 }
@@ -49,7 +47,7 @@ function prev_thought(){
         xhttp.onload = function() {
             document.getElementById("thought").innerHTML = this.responseText;
         }
-        xhttp.open("GET", thought+'/'+ old_thoughts[curr_ind]);
+        xhttp.open("GET", 'thoughts/'+old_thoughts[curr_ind]);
         xhttp.send();
     }
 }
