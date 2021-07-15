@@ -1,4 +1,4 @@
-var num_thoughts = 7;
+var num_thoughts = 5;
 var curr_ind = 0;
 
 fresh_thoughts = Array.from(Array(num_thoughts).keys());
@@ -28,7 +28,7 @@ function new_thought() {
 
 function next_thought(){
     curr_ind +=1;
-    if (curr_ind == old_thoughts.length){
+    if (curr_ind >= old_thoughts.length){
         new_thought();
     } else{
         const xhttp = new XMLHttpRequest();
