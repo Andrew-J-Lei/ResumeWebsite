@@ -124,6 +124,9 @@
 
 {% block jscss %}
 <!-- <script src="{{url_for('static', filename='js/animejs/lib/anime.es.js') }}"></script> -->
+<script type="text/javascript">
+    var incl_intro = {{ incl_intro }};
+</script>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 <script type="text/javascript" src="{{url_for('static', filename='js/homepage.js') }}"></script>
 <!-- <script type="text/javascript" src="{{url_for('static', filename='js/require.js') }}"></script> -->

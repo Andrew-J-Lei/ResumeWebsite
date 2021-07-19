@@ -11,7 +11,11 @@ app = Flask(__name__)
 # ------------------------------------------- Pages -----------------------------------------------
 @app.route("/", methods=['GET','POST'])
 def home():
-    return render_template('home.html', title='Home | AndrewLei4Hire')
+    return render_template('home.html', title='Home | AndrewLei4Hire', incl_intro=1)
+
+@app.route("/skip_intro", methods=['GET','POST'])
+def home_skip_intro():
+    return render_template('home.html', title='Home | AndrewLei4Hire', incl_intro=0)
 
 @app.route("/projects", methods=['GET','POST'])
 def projects():

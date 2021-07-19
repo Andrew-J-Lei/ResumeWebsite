@@ -87,7 +87,7 @@ div.nav_bar.row:after {
 
 #hider{
   display:hidden;
-  overflow:hidden;
+  overflow:visible;
   position:absolute;
   top:95px;
   left:170px;
@@ -95,6 +95,7 @@ div.nav_bar.row:after {
   height:120px;
   z-index:50;
   border-radius: 50%;
+  /*opacity:0;*/
 }
 
 #help{

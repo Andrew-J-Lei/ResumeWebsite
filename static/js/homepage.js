@@ -57,6 +57,8 @@ async function introduce_myself(){
   var hider = document.getElementById('hider');
   var page = document.getElementsByClassName('home_bg')[0];
   var nav_bar = document.getElementsByClassName('nav_bar')[0];
+  hider.style.opacity = 1;
+  hider.style.overflow = "hidden";
   page.style.display = "none";
   nav_bar.style.display = "none";
   var intro_text = document.getElementById('intro_text');
@@ -177,7 +179,9 @@ function increment_subcontent(type) {
 }
 
 async function onload_homepage(){
-  await introduce_myself();
+  if (incl_intro == 1){
+    await introduce_myself();
+  }
   curr_ints = 1;
   change_subcontent('ints',curr_ints);
   curr_phils = 1;
